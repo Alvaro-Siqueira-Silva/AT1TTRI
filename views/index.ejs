@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivo de Desenvolvimento Sustentável</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style800.css" media="(max-width:800px)">
+
+</head>
+
+<body>
+
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <aside class="menu white-bg">
+        <div class="main-content menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#home">INÍCIO</a>
+            </h1>
+
+            <nav>
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="#intro">OBJETIVO</a></li>
+                    <li><a href="#grid-one">METAS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="menu-spacing"></div>
+
+    <section id="home" class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+                <h2>Os Objetivos de Desenvolvimento Sustentável no Brasil</h2>
+                
+            </div>
+            <div class="intro-img">
+                <p>Os Objetivos de Desenvolvimento Sustentável são um apelo global à ação para acabar com a pobreza, proteger o meio ambiente e o clima e garantir que as pessoas, em todos os lugares, possam desfrutar de paz e de prosperidade. Estes são os objetivos para os quais as Nações Unidas estão contribuindo a fim de que possamos atingir a Agenda 2030 no Brasil.</p>            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="white-bg section">
+        <div class="main-content top3-content">
+            <h2>Objetivo 3</h2>
+            <p>Assegurar uma vida saudável e promover o bem-estar para todas e todos, em todas as idades</p>
+        </div>
+    </section>
+
+
+    <section id="grid-one" class="grid-one main-bg section">
+        <div class="main-content grid-one-content">
+            <h2 class="grid-main-heading">Metas</h2>
+            <div class="grid">
+                <% for (var n=0; n<dados.length;n++) {%>
+                    <article>
+                        <h3><%=dados[n].n%> <br></h3>
+    
+                        <p><%=dados[n].texto%></p>
+                    </article>
+    <%}%>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <a class="back-to-top" href="#">➤</a>
+</body>
+
+</html>
